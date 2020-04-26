@@ -32,16 +32,6 @@ impl<'a> AwsSign<'a, HashMap<String, String>> {
         secret_key: &'a str,
     ) -> Self {
         let url: Url = url.parse().unwrap();
-        let headers: HashMap<String, String> = headers
-            .iter()
-            .filter_map(|(key, value)| {
-                if let Ok(value_inner) = value.to_str() {
-                    Some((key.as_str().to_owned(), value_inner.to_owned()))
-                } else {
-                    None
-                }
-            })
-            .collect();
         Self {
             method,
             url,
