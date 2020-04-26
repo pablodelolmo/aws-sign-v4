@@ -26,7 +26,7 @@ impl<'a> AwsSign<'a, HashMap<String, String>> {
         method: &'a str,
         url: &'a str,
         datetime: &'a DateTime<Utc>,
-        headers: &'a HeaderMap,
+        headers: &'a HashMap<String, String>,
         region: &'a str,
         access_key: &'a str,
         secret_key: &'a str,
