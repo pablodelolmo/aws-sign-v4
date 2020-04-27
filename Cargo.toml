@@ -15,7 +15,7 @@ edition = "2018"
 chrono = "0.4.10"
 url = "2.1.0"
 hex = "0.4.0"
-ring = "0.17.0-alpha.1"
+ring = {git = "https://github.com/briansmith/ring"}
 http = "0.2.0"
 
 [dev-dependencies]
